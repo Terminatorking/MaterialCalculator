@@ -56,6 +56,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material3.window.size.class1.android)
+    implementation(libs.androidx.material.icons.extended)
 
     //unit Tests
     testImplementation(libs.androidx.core)
