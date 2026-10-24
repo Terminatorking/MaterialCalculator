@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import ghazimoradi.soheil.materialcalculator.presentation.screen.CalculatorScreen
 import ghazimoradi.soheil.materialcalculator.ui.theme.MaterialCalculatorTheme
 
 class MainActivity : ComponentActivity() {
@@ -12,7 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MaterialCalculatorTheme {
-
+                CalculatorScreen()
             }
         }
     }
