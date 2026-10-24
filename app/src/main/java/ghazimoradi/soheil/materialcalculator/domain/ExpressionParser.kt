@@ -1,5 +1,7 @@
 package ghazimoradi.soheil.materialcalculator.domain
 
+import ghazimoradi.soheil.materialcalculator.domain.ExpressionWriter.Companion.NUMBERS_BETWEEN_0TO9
+
 class ExpressionParser(
     private val calculation: String
 ) {
@@ -39,7 +41,7 @@ class ExpressionParser(
         var i = startingIndex
 
         val numberAsString = buildString {
-            while (i < calculation.length && calculation[i] in "0123456789.") {
+            while (i < calculation.length && calculation[i] in "$NUMBERS_BETWEEN_0TO9.") {
                 append(calculation[i])
                 i++
             }
@@ -63,5 +65,4 @@ class ExpressionParser(
             )
         )
     }
-
 }
