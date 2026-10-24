@@ -66,12 +66,12 @@ class ExpressionWriter {
             return expression.isEmpty() || expression.last() in "$operationSymbols()$NUMBERS_BETWEEN_0TO9"
         }
 
-        return expression.isNotEmpty() || expression.last() in "$NUMBERS_BETWEEN_0TO9)"
+        return expression.isNotEmpty() && expression.last() in "$NUMBERS_BETWEEN_0TO9)"
     }
 
     private fun prepareForCalculation(): String {
 
-        val newExpression = expression.takeLastWhile {
+        val newExpression = expression.dropLastWhile {
             it in "$operationSymbols(."
         }
 
