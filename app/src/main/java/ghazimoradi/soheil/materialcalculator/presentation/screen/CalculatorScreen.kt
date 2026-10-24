@@ -7,7 +7,9 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -45,6 +47,7 @@ fun CalculatorScreen(
                         )
                     )
                     .background(MaterialTheme.colorScheme.secondaryContainer)
+                    .statusBarsPadding()
                     .padding(
                         vertical = 64.dp,
                         horizontal = 16.dp
@@ -54,7 +57,9 @@ fun CalculatorScreen(
             CalculatorButtonGrid(
                 actions = calculatorActions,
                 onAction = viewModel::onAction,
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier
+                    .navigationBarsPadding()
+                    .padding(8.dp)
             )
         }
     }

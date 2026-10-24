@@ -1,4 +1,4 @@
-package ghazimoradi.soheil.materialcalculator.domain;
+package ghazimoradi.soheil.materialcalculator.domain
 
 class ExpressionWriter {
 
